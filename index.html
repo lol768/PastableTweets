@@ -6,11 +6,12 @@ function getTweet(url) {
  $('#outputbox').val("Loading...");
  var id = url.split("/").pop();
  $.get('gettweet.php?id=' + id, function(data) { $('#outputbox').val(data); });
+ $('#outputbox').select();
 }
 </script>
 <title>Pastable Tweets</title>
 </head>
-<body>
+<body onLoad="$('#urlfield').select();">
 <h3>Pastable Tweets!</h3>
 <p>Paste a direct link to a tweet in the box, hit Enter, then copy the text from the text area below it.<br>
 We accept links in the form https://twitter.com/username/status/longlineofnumbers or even just the number at the end.<br>
