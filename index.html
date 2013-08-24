@@ -6,6 +6,7 @@
 function getTweet(url) {
  $('#outputbox').val("Loading...");
  var id = url.split("/").pop();
+ if (id == "") { var id = url.slice(0, - 1).split("/").pop(); }
  $.get('gettweet.php?id=' + id, function(data) { $('#outputbox').val(data); $('#outputbox').select(); });
 }
 </script>

@@ -18,7 +18,7 @@ function get_isgd_url($url)
 require_once('TwitterAPIExchange.php');
 include('config.php');
 
-if (!isset($_GET['id'])) {
+if (!isset($_GET['id']) || empty($_GET['id'])) {
     die("No URL provided!");
 }
 
