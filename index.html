@@ -6,8 +6,7 @@
 function getTweet(url) {
  $('#outputbox').val("Loading...");
  var id = url.split("/").pop();
- $.get('gettweet.php?id=' + id, function(data) { $('#outputbox').val(data); });
- $('#outputbox').select();
+ $.get('gettweet.php?id=' + id, function(data) { $('#outputbox').val(data); $('#outputbox').select(); });
 }
 </script>
 <title>Pastable Tweets</title>
